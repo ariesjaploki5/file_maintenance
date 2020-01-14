@@ -26,9 +26,18 @@ class SlCodesController extends Controller
     public function update(Request $request, $id){
         $sl_code = SlCodes::findOrFail($id);
         $sl_code->update([
-            'unit_desc' => $request->unit_desc,
+            // 'unit_desc' => $request->unit_desc,
             'item_id' => $request->item_id,
             'brand_id' => $request->brand_id,
+        ]);
+
+        return response()->json();
+    }
+
+    public function destroy($id){
+        $sl_code = SlCodes::where('sl_code', $id)->first();
+        $sl_code->update([
+            'item_id' => null,
         ]);
 
         return response()->json();

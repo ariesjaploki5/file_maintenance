@@ -24,6 +24,7 @@ Vue.component('items-component', require('./pages/items.vue').default);
 Vue.component('sl_codes-component', require('./pages/sl_codes.vue').default);
 Vue.component('homis_dm-component', require('./pages/homis_dm.vue').default);
 Vue.component('homis_ms-component', require('./pages/homis_ms.vue').default);
+Vue.component('items_dm-component', require('./pages/items_dm.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

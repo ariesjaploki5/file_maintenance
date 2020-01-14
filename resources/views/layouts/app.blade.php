@@ -22,8 +22,8 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     File Maintenance
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -34,18 +34,21 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="/items_page">Items</a>
-                        </li> -->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/sl_codes_page">Sl Codes</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="/items_dm_page">Drugs And Medicines <sub>App</sub></a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/homis_dm_page">Drugs And Medicines <sub>Homis</sub></a>
                         </li>
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="/homis_ms_page">Medical Supplies <sub>Homis</sub></a>
-                        </li> -->
+                        </li>
                 
                     </ul>
 

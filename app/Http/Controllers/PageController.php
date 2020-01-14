@@ -14,6 +14,10 @@ class PageController extends Controller
         return view('pages.sl_codes');
     }
 
+    public function items_dm(){
+        return view('pages.items_dm');
+    }
+
     public function homis_dm(){
         return view('pages.homis_dm');
     }

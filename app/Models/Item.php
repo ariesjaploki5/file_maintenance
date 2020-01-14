@@ -16,6 +16,10 @@ class Item extends Model
     ];
 
     public function sl_codes(){
-        return $this->hasMany('App\Models\SlCodes');
+        return $this->hasMany('App\Models\SlCodes', 'item_id', 'item_id');
+    }
+
+    public function homis_dms(){
+        return $this->hasMany('App\Views\ItemHomisDm', 'item_id', 'item_id');
     }
 }

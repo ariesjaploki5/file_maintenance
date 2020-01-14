@@ -26,7 +26,7 @@
                                 <th width="10%">Item ID</th>
                                 <th width="25%">Item Desc</th>
                                 <th>Unit</th>
-                                <th>Action</th>
+                                <th width="5%">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,10 +50,10 @@
         </div>
     </div>
     <div class="modal fade" id="dmModal" tabindex="-1" role="dialog" aria-labelledby="dmModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="dmModalLabel">Edit Sl Code</h5>
+                <h5 class="modal-title" id="dmModalLabel">Edit Drugs And Medicines</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -150,6 +150,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

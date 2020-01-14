@@ -2,9 +2,9 @@
   <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card bg-dark text-white">
+            <div class="card bg-dark">
                 <div class="card-header">
-                    <div class="row">
+                    <div class="row  text-white">
                         <div class="col-auto">
                             <h4>SL CODES</h4>
                         </div>
@@ -25,31 +25,38 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-sm table-hover table-dark">
+                    <table class="table table-sm table-hover table-dark table-bordered">
                         <thead>
                             <tr>
+                                <th colspan="3" class="text-center">Accounting</th>
+                                <th colspan="3"></th>
+                                <th></th>
+                            </tr>
+                            <tr>
                                 <th width="12%">SL Code</th>
-                                <th width="32%">SL Desc</th>
+                                <th width="30%">SL Desc</th>
                                 <th width="4%">Unit</th>
                                 <th width="8%">Item Code</th>
-                                <th width="32%">Item Desc</th>
+                                <th width="30%">Item Desc</th>
                                 <th width="4%">Unit</th>
-                                <!-- <th width="4%">Brand</th> -->
-                                <th width="4%">Action</th>
+                                <th width="8%">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="sc in sl_codes" :key="sc.sl_code">
+                            <tr v-for="sc in sl_codes" :key="sc.sl_code" :class="{ 'bg-danger' : sc.item_id == null }">
                                 <td>{{ sc.sl_code }}</td>
                                 <td>{{ sc.sl_description }}</td>
                                 <td>{{ sc.unit_desc }}</td>
                                 <td>{{ sc.item_id }}</td>
                                 <td>{{ sc.item_desc }}</td>
                                 <td>{{ sc.item_unit_desc }}</td>
-                                <!-- <td>{{ sc.brand_desc }}</td> -->
+
                                 <td>
                                     <button class="btn btn-sm btn-success" type="button" @click="edit_sl_code(sc)">
                                         edit
+                                    </button>
+                                    <button class="btn btn-sm btn-danger" type="button" @click="remove_item_id(sc)">
+                                        remove
                                     </button>
                                 </td>
                             </tr>
@@ -60,7 +67,7 @@
         </div>
     </div>
     <div class="modal fade" id="slCodeModal" tabindex="-1" role="dialog" aria-labelledby="slCodeModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="slCodeModalLabel">Edit Sl Code</h5>
@@ -107,7 +114,6 @@
     </div>
 </div>
 </template>
-
 <script>
 export default {
     data(){
@@ -175,6 +181,13 @@ export default {
 
             });
         },
+        remove_item_id(){
+            axios.delete('../sl_code/'+this.sl_code.sl_code).then(() => {
+                this.get_sl_codes();
+            }).catch(() => {
+
+            });
+        }
     },
     created(){
         this.get_categories();
@@ -183,6 +196,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+tbody{
+    font-size: 12px !important;
+}
 </style>

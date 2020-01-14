@@ -36,19 +36,24 @@ export default {
         return {
             items: [],
             item: {},
+            category_id:'',
+            word: '',
         }
     },
     methods:{
         get_items(){
-            axios.get('../item').then(() => {
+            axios.get('../item?category_id='+this.category_id+'&&word='+this.word).then(({data}) => {
+                this.items = data;
+            }).catch(() => {
 
             });
-        }
+        },
+
     },
 
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
