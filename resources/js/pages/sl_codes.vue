@@ -50,7 +50,6 @@
                                 <td>{{ sc.item_id }}</td>
                                 <td>{{ sc.item_desc }}</td>
                                 <td>{{ sc.item_unit_desc }}</td>
-
                                 <td>
                                     <button class="btn btn-sm btn-success" type="button" @click="edit_sl_code(sc)">
                                         edit
@@ -72,7 +71,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="slCodeModalLabel">Edit Sl Code</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <form @submit.prevent="update_sl_code()">

@@ -94,7 +94,7 @@ export default {
             }).catch(() => {
 
             });
-        }
+        },
     },
     created(){
         this.get_items_dm();

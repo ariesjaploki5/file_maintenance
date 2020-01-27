@@ -23,4 +23,6 @@ class MappingController extends Controller
     public function destroy(){
 
     }
+    
+    
 }
