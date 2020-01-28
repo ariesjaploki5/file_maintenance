@@ -16,6 +16,8 @@ class PoItemController extends Controller
 
     public function store(Request $request){
 
+        
+
     }
 
     public function show($id){
@@ -23,12 +25,14 @@ class PoItemController extends Controller
     }
 
     public function update(Request $request, $id){
+
         $po_item = PoItem::findOrFail($id);
         $po_item->update([
             'item_code' => $request->item_code,
         ]);
 
         return response()->json();
+
     }
 
     public function destroy($id){

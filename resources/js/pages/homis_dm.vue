@@ -32,7 +32,10 @@
                         <tbody>
                             <tr v-for="(homis_dm, index) in homis_dms" :key="index">
                                 <td>{{ homis_dm.dmdcomb }}-{{ homis_dm.dmdctr }}</td>
-                                <td>{{ homis_dm.homis_desc }}</td>
+                                <td>
+                                    <div>{{ homis_dm.homis_desc }}</div>
+                                    <div><small>{{ homis_dm.chrgdesc }}</small></div>
+                                </td>
                                 <td>{{ homis_dm.homis_unit_desc }}</td>
                                 <td>{{ homis_dm.item_id }}</td>
                                 <td>{{ homis_dm.item_desc }}</td>

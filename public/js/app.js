@@ -2058,6 +2058,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2476,7 +2479,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -38852,7 +38854,13 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(homis_dm.homis_desc))]),
+                      _c("td", [
+                        _c("div", [_vm._v(_vm._s(homis_dm.homis_desc))]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c("small", [_vm._v(_vm._s(homis_dm.chrgdesc))])
+                        ])
+                      ]),
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(homis_dm.homis_unit_desc))]),
                       _vm._v(" "),

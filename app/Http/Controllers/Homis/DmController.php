@@ -10,7 +10,11 @@ use App\Models\ItemHdmhdr;
 class DmController extends Controller
 {
     public function index(){
-        $data = DB::table("mmo.dbo.tfn_homis_dm()")->where('homis_desc', 'like', '%'.request()->word.'%')->orderBy('homis_desc', 'asc')->get();
+        $data = DB::table("mmo.dbo.tfn_homis_dm()")
+        ->where('homis_desc', 'like', '%'.request()->word.'%')
+        ->orderBy('homis_desc', 'asc')
+        // ->orderBy('chrgdesc', 'asc')
+        ->get();
 
         return response()->json($data);
     }
